@@ -4,42 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domino Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Main Menu Section -->
-        <div id="main-menu" class="main-menu">
-            <h1>Welcome to Domino Game</h1>
-            <select id="game-mode-select">
-                <option value="">Select Game Mode</option>
-                <option value="1v1">1 vs 1</option>
-                <option value="1vPC">1 vs PC</option>
-                <!-- Other game modes can be added here -->
-            </select>
-            <button id="start-game-button">Start Game</button>
-        </div>
-
-        <!-- Game Board Section -->
-        <div id="game-board" class="game-board hidden">
-            <div id="dominoes-container"></div>
-        </div>
-
-        <!-- Player Hand Section -->
-        <div id="player-hand" class="player-hand hidden">
-            <!-- Player's hand tiles will be displayed here -->
-        </div>
-
-        <!-- Footer Section -->
-        <div id="footer" class="footer hidden">
-            <button id="draw-tile-button">Draw Tile</button>
-            <button id="end-turn-button">End Turn</button>
-            <div class="chat-container">
-                <input type="text" id="chat-input" placeholder="Type a message...">
-                <button id="send-chat-button">Send</button>
-            </div>
-        </div>
+    <div id="main-menu">
+        <h1>Domino Game</h1>
+        <select id="game-mode-select">
+            <option value="">Select Game Mode</option>
+            <option value="1v1">1v1</option>
+            <option value="1vPC">1vPC</option>
+        </select>
+        <button id="start-game-button">Start Game</button>
     </div>
+
+    <div id="game-board" class="hidden">
+        <div id="dominoes-container"></div>
+        <div id="player-hand"></div>
+    </div>
+
+    <div id="footer" class="hidden">
+        <button id="draw-tile-button">Draw Tile</button>
+        <button id="end-turn-button">End Turn</button>
+        <input type="text" id="chat-input" placeholder="Type your message">
+        <button id="send-chat-button">Send</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
