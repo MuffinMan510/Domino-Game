@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentMode = '';
     let playerTurn = true; // Assume player starts
 
+    // Debugging: Log messages to ensure code execution
+    console.log('DOM fully loaded and parsed');
+
     // Initialize the game with a standard set of dominoes
     function initializeDominoes() {
         dominoes = [];
@@ -27,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         dominoes = shuffleArray(dominoes);
+        console.log('Dominoes initialized:', dominoes);
     }
 
     // Shuffle an array
@@ -74,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         currentMode = gameModeSelect.value;
         if (currentMode) {
+            console.log('Starting game in mode:', currentMode);
             gameBoard.classList.remove('hidden');
             playerHand.classList.remove('hidden');
             footer.classList.remove('hidden');
@@ -96,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Render player hand
             renderPlayerHand();
+        } else {
+            console.log('Please select a game mode');
         }
     }
 
@@ -107,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentMode === '1vPC') {
                 cpuHandTiles.push(dominoes.pop());
             }
+        }
+        console.log('Player hand:', playerHandTiles);
+        if (currentMode === '1vPC') {
+            console.log('CPU hand:', cpuHandTiles);
         }
     }
 
@@ -190,18 +201,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    endTurnButton.addEventListener('click', () => {
-        if (gameStarted && playerTurn) {
-            playerTurn = false;
-            if (currentMode === '1vPC') {
-                cpuMove();
-            } else {
-                playerTurn = !playerTurn;
-            }
-        }
-    });
-    sendChatButton.addEventListener('click', () => {
-        alert(`Chat message: ${chatInput.value}`);
-        chatInput.value = '';
-    });
-});
