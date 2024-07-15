@@ -250,3 +250,55 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(gameLoop, 1000);
 
 });
+// Render a domino tile with pips
+function renderDomino(tile, container) {
+    const [side1, side2] = tile;
+    const dominoElement = document.createElement('div');
+    dominoElement.className = 'domino';
+
+    const topContainer = document.createElement('div');
+    topContainer.className = 'top';
+    const bottomContainer = document.createElement('div');
+    bottomContainer.className = 'bottom';
+
+    // Define pips based on the number on each side
+    topContainer.appendChild(createPipContainer(side1));
+    bottomContainer.appendChild(createPipContainer(side2));
+
+    dominoElement.appendChild(topContainer);
+    dominoElement.appendChild(bottomContainer);
+    container.appendChild(dominoElement);
+}
+
+// Create a pip container based on the number
+function createPipContainer(num) {
+    const pipContainer = document.createElement('div');
+    pipContainer.className = 'pip-container';
+
+    const pips = [];
+    if (num === 1) {
+        pips.push(createPip());
+    } else if (num === 2) {
+        pips.push(createPip(), createPip());
+    } else if (num === 3) {
+        pips.push(createPip(), createPip(), createPip());
+    } else if (num === 4) {
+        pips.push(createPip(), createPip(), createPip(), createPip());
+    } else if (num === 5) {
+        pips.push(createPip(), createPip(), createPip(), createPip(), createPip());
+    } else if (num === 6) {
+        for (let i = 0; i < 6; i++) {
+            pips.push(createPip());
+        }
+    }
+
+    pips.forEach(pip => pipContainer.appendChild(pip));
+    return pipContainer;
+}
+
+// Create a single pip element
+function createPip() {
+    const pip = document.createElement('div');
+    pip.className = 'pip';
+    return pip;
+}
