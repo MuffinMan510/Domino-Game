@@ -1,0 +1,210 @@
+/* General styles for the game container */
+#game-container {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styles for the game board */
+#game-board {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Styles for the dominoes container */
+#dominoes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Domino styles */
+.domino {
+    display: inline-block;
+    width: 60px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
+    font-size: 24px;
+    color: black;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Styles for the pips */
+.pip {
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+}
+
+/* Pips container */
+.pip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Domino pips layout */
+.domino .top, .domino .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Single pip style */
+.single-pip {
+    margin: 0;
+}
+
+/* Double pip style */
+.double-pip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Three pips style */
+.three-pips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Four pips style */
+.four-pips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 50%;
+}
+
+/* Five pips style */
+.five-pips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Six pips style */
+.six-pips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60%;
+}
+
+/* Styles for the player's hand */
+#player-hand {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Player’s visible hand */
+#player-visible-hand {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styles for the opponent’s face-down hand */
+#opponent-hand {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Face-down domino styles */
+.face-down {
+    background-color: #ccc;
+    color: #ccc;
+    border: 1px solid #666;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Footer styles */
+#footer {
+    margin-top: 20px;
+}
+
+/* Opponent info styles */
+#opponent-info {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Chat input styles */
+#chat-input {
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Button styles for drawing tiles and ending turn */
+#draw-tile-button, #end-turn-button, #send-chat-button {
+    background-color: #28a745;
+}
+
+#draw-tile-button:hover, #end-turn-button:hover, #send-chat-button:hover {
+    background-color: #1e7e34;
+}
+
+/* Player and CPU score display styles */
+#player-score, #cpu-score {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#player-score {
+    color: #007BFF;
+}
+
+#cpu-score {
+    color: #FF0000;
+}
+
+/* Styles for the chat messages */
+#chat-messages {
+    margin-top: 10px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    height: 100px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+/* General styles for game modes and scores */
+#game-mode-select, #score-goal-select {
+    margin: 10px;
+}
