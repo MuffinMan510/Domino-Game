@@ -152,3 +152,74 @@ button:hover {
 #game-mode-select, #score-goal-select {
     margin: 10px;
 }
+/* Styles for the pips */
+.pip {
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+}
+
+/* Pips container */
+.pip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Domino pips layout */
+.domino .top, .domino .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Single pip style */
+.single-pip {
+    margin: 0;
+}
+
+/* Double pip style */
+.double-pip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Three pips style */
+.three-pips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Four pips style */
+.four-pips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 50%;
+}
+
+/* Five pips style */
+.five-pips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Six pips style */
+.six-pips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60%;
+}
